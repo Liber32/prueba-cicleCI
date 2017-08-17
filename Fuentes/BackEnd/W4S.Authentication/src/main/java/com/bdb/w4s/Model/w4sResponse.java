@@ -31,10 +31,5 @@ public class w4sResponse {
 	public void setEntity(Object entity) {
 		this.entity = entity;
 	}
-	public w4sResponse getResponse()
-	{
-		
-		return this;
-		
-	}
+	
 }
