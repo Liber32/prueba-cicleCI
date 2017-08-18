@@ -4,6 +4,8 @@ package com.bdb.w4s.Services;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.ApplicationContext;
@@ -23,7 +25,7 @@ public class AuthenticationService {
 
 	
   
-   @Autowired 
+   @Resource
    private  UserRepository userRepository;
 	
    
@@ -31,18 +33,9 @@ public class AuthenticationService {
 	{
 		w4sResponse response= new w4sResponse();
 		
-		
-		ApplicationContext ctx=new ClassPathXmlApplicationContext("Beans.xml");
-		 
-		
-		userRepository = (UserRepository) ctx.getBean("userRepository");
-		
-	  
-		
-	    
 	    User cust=new User();
 		
-		
+	   cust=	 (User) userRepository.findByemail(email);
 		//TO-DO: validar en base de datos
 		
 		//usuario correcto

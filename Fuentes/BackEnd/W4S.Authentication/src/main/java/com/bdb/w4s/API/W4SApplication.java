@@ -3,9 +3,16 @@ package com.bdb.w4s.API;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.data.repository.config.RepositoryConfiguration;
 
+@Configuration
+@ComponentScan 
 @SpringBootApplication
+@Import(RepositoryConfiguration.class)
 public class W4SApplication {
 
 	public static void main(String[] args) {
