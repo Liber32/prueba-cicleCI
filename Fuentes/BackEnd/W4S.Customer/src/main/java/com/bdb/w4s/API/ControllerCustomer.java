@@ -15,7 +15,7 @@ import com.bdb.w4s.Services.*;
 @RequestMapping("/Customer")
 public class ControllerCustomer {
 
-	@RequestMapping(path ="/{email}", method = RequestMethod.GET)
+	@RequestMapping(path ="/{email}", method = RequestMethod.Post)
 	public w4sResponse Index (@PathVariable("email") String email)
 	{
 		

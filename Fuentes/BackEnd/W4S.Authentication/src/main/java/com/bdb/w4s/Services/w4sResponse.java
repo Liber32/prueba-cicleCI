@@ -1,4 +1,4 @@
-package com.bdb.w4s.Model;
+package com.bdb.w4s.Services;
 
 public class w4sResponse {
 
