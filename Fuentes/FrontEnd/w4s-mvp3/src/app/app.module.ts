@@ -12,8 +12,6 @@ import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
