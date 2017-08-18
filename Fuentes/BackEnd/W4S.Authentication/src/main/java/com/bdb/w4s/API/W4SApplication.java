@@ -10,9 +10,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.data.repository.config.RepositoryConfiguration;
 
 @Configuration
-@ComponentScan 
+@ComponentScan({"com.dbd.w4s.API","com.dbd.w4s.Model","com.dbd.w4s.Services"})
 @SpringBootApplication
-@Import(RepositoryConfiguration.class)
 public class W4SApplication {
 
 	public static void main(String[] args) {
