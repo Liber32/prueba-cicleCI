@@ -67,5 +67,18 @@ public class AuthenticationService {
 		
 	}
 	
-	
+	public w4sResponse Register(String name, String email,String Phone)
+	{
+		
+		
+		w4sResponse response= new w4sResponse();
+		response.setCode("200");
+		response.setType("Customer");
+		
+		Customer cust=new Customer();
+		
+		return response;
+		
+		
+	}
 }

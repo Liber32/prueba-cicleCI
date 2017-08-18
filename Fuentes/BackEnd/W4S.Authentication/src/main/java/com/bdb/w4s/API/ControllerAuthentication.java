@@ -47,4 +47,14 @@ public class ControllerAuthentication {
 	}
 	
 	
+	@RequestMapping(path="/{email}", method = POST)
+	public w4sResponse Register(@PathVariable("nombre") String nombre,@PathVariable("email") String emai,@PathVariable("phonenumber") String phone)
+	{
+		
+		
+		
+		
+		
+		
+	}
 }
