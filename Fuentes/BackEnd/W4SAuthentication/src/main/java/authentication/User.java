@@ -11,9 +11,12 @@ public class User {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
-    private String full_name;
+    private String fullName;
 
     private String email;
+    
+    
+    private String phone_Number;
 
 	public Integer getId() {
 		return id;
@@ -23,12 +26,21 @@ public class User {
 		this.id = id;
 	}
 
-	public String getfull_Name() {
-		return full_name;
+	
+	public String getphoneNumber() {
+		return phone_Number;
 	}
 
-	public void setfull_Name(String name) {
-		this.full_name = name;
+	public void setphoneNumber(String name) {
+		this.phone_Number = name;
+	}
+	
+	public String getfullName() {
+		return fullName;
+	}
+
+	public void setfullName(String name) {
+		this.fullName = name;
 	}
 
 	public String getEmail() {
