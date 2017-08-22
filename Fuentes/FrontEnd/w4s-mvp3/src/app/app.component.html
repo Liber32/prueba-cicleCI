@@ -2,27 +2,27 @@
 
 
 <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
               <span class="glyphicon glyphicon-education"></span>
             </a>
-        <p class="navbar-text">Wheels 4 students </p>
-      </div>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="../navbar-static-top/"><span class="glyphicon glyphicon-home" > </span></a></li>
-      </ul>
+      <p class="navbar-text">Wheels 4 students </p>
     </div>
-  </nav>
 
-  <div class="container">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="../navbar-static-top/"><span class="glyphicon glyphicon-home" > </span></a></li>
+    </ul>
+  </div>
+</nav>
 
-      <div class="panel panel-default">
-          <div class="panel-body">
-      <router-outlet></router-outlet>      
-          </div>
-        </div>
+<div class="container">
+  <flash-messages id="floating_alert"></flash-messages>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
 <nav class="navbar navbar-inverse navbar-fixed-bottom">
   <div class="container-fluid">

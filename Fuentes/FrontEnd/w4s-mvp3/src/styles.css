@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+#floating_alert {
+    position: fixed;
+    top: 130px;
+    right: 20px;
+    z-index: 5000;
+}
