@@ -13,7 +13,7 @@ export class RegistroService extends BaseService {
   }
 
   public registrarUsuario(registro: Registro) {
-    return this.http.post(`${this.baseUrl}/Registro`, JSON.stringify(registro), { headers: this.headers })
+    return this.http.post(`${this.baseUrl}/register`, JSON.stringify(registro), { headers: this.headers })
       .map(
         response => response.json() as response
       ).catch(this.handleError);
