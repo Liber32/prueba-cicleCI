@@ -53,7 +53,7 @@ public class MainController {
 		User newUser= new User();
 		
 		newUser.setEmail(user.getEmail());
-		newUser.setfull_Name(user.getfull_Name());
+		newUser.setfullName(user.getfullName());
 		User theUser=userRepository.save(newUser);
 		
 		w4sResponse response= new w4sResponse();
