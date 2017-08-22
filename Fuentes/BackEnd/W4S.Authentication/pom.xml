@@ -50,7 +50,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            
+           
         </plugins>
+
+		
+        
+        <finalName>WS4-Authentication</finalName>
     </build>
 
 </project>

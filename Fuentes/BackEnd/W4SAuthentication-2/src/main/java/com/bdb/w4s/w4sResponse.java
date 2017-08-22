@@ -1,4 +1,4 @@
-package  authentication;
+package  com.bdb.w4s;
 
 public class w4sResponse {
 

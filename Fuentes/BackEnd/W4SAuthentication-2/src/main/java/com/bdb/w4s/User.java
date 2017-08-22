@@ -1,4 +1,4 @@
-package authentication;
+package com.bdb.w4s;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
