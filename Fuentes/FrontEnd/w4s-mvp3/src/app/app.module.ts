@@ -1,16 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 
 import { LoginModule } from './modules/login/login.module';
+import { FlashMessagesModule, FlashMessagesService } from 'angular2-flash-messages';
 import { LoginComponent } from './modules/login/login.component';
 import { AuthGuard } from './_guard/auth.guard';
 import { AppRoutingModule } from './app-routing.module';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { RegisterComponent } from './components/register/register.component';
+import { RegistroService } from './services/registro.service';
+import { Http } from '@angular/http';
 
 
 @NgModule({
@@ -22,10 +27,13 @@ import { RegisterComponent } from './components/register/register.component';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     AppRoutingModule,
-    LoginModule
+    FlashMessagesModule,
+    LoginModule,
+    FormsModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard,RegistroService,FlashMessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
