@@ -5,6 +5,7 @@ import { LoginComponent } from './modules/login/login.component';
 import { AuthGuard } from './_guard/auth.guard';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 const appRoutes: Routes = [
@@ -12,6 +13,7 @@ const appRoutes: Routes = [
   { path: 'welcome', component: WelcomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'busqueda', component: BusquedaComponent },
+  { path: 'register', component: RegisterComponent },
   { path: '**', redirectTo:"/welcome"}
 ];
 

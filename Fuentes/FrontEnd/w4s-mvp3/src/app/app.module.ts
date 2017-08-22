@@ -10,13 +10,15 @@ import { AuthGuard } from './_guard/auth.guard';
 import { AppRoutingModule } from './app-routing.module';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    BusquedaComponent
+    BusquedaComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
