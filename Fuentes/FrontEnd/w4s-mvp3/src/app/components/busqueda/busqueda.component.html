@@ -2,18 +2,10 @@
   <div class="form-group">
     <label for="universidad">Elige tu Universidad de origen:</label>
 
-    <select class="form-control" name="univerdidad" id="universidad">
+    <select class="form-control" name="univerdidad" id="universidad" [(ngModel)]="universidadSeleccionada" >
       <option value=""> Seleccione </option>
-      <option value="1"> Javeriana </option>
-      <option value="2"> Andes </option>
-      <option value="3"> Distrital </option>
-      <option value="4">San Martín</option>
-      <option value="5">Universidad Nacional</option>
-      <option value="6"> Universidad del Rosario </option>
-      <option value="7"> Universidad Sergio Arboleda </option>
-      <option value="8"> Santo Tomás </option>
-      <option value="9"> Universidad de La Salle</option>
-      <option value="10">Universidad Externado de Colombia</option>
+      <option *ngFor= "let universidad of univerdidades" [ngValue]="universidad"> {{universidad.name}} </option>
+      
     </select>
   </div>
 
@@ -44,5 +36,5 @@
     </div>
   </div>
   <hr>
-  <button class="btn btn-primary"> Buscar </button>
+  <button class="btn btn-primary" (click) ="buscar()"> Buscar </button>
 </form>

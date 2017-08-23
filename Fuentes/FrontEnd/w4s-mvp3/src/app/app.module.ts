@@ -19,6 +19,7 @@ import { Http } from '@angular/http';
 import { LogoutComponent } from './components/logout/logout.component';
 import { NavComponent } from './components/nav/nav.component';
 import { LoginService } from './services/login.service';
+import { BusquedaService } from './services/busqueda.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,11 @@ import { LoginService } from './services/login.service';
     LoginModule,
     FormsModule
   ],
+<<<<<<< HEAD
   providers: [AuthGuard,RegistroService,FlashMessagesService,LoginService],
+=======
+  providers: [AuthGuard,RegistroService, BusquedaService,FlashMessagesService],
+>>>>>>> ca1773d7bfd5ca5d9a4fabb391c6dfa0bec9dac7
   bootstrap: [AppComponent]
 })
 export class AppModule { }
