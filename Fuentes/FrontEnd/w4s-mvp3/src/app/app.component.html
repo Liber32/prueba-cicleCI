@@ -1,35 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-              <span class="glyphicon glyphicon-education"></span>
-            </a>
-      <p class="navbar-text">Wheels 4 students </p>
-    </div>
-    <app-logout></app-logout>
-  </div>
-</nav>
-
-<div id="contenedor" class="container">
-  <div class=" col-md-10">
-    <flash-messages id="floating_alert"></flash-messages>
-    <div class="panel">
-      <div class="panel-body">
-        <router-outlet></router-outlet>
+<app-nav></app-nav>
+<div class="container">
+  <div>
+    <div id="contenedor" class="container-fluid">
+      <div class=" col-md-12">
+        <div class="panel">
+          <div class="panel-body">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+        <flash-messages id="floating_alert"></flash-messages>
       </div>
     </div>
   </div>
 </div>
-<nav class="navbar navbar-inverse navbar-fixed-bottom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-          <span class="glyphicon glyphicon-education"></span>
-      </a>
-      <p class="navbar-text">Wheels 4 students </p>
-    </div>
-  </div>
-</nav>

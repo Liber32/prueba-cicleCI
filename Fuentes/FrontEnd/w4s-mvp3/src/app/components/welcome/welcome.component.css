@@ -1,12 +1,23 @@
 #list{
     padding-top: 30px;
     padding-right: 10px;
-    color: #fff;
-    font-size: large;
-    font-style: oblique;
+    font-family: Arial, Helvetica, sans-serif; font-size: 27px;
 }
 
 #titulo{
-    color:#0d155c;
+    padding: 15px;
+    margin-top:0px;
+    color:#0C155C;
     font-weight: bold;
+}
+
+.bg-org{
+    
+    background-color: #fdbf94;
+}
+
+#slogan{
+    font-style: oblique;
+    font-family: Arial, Helvetica, sans-serif; font-size: 27px;
+    
 }

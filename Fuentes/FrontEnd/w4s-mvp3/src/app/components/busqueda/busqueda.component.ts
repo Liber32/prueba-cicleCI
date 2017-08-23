@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BusquedaService } from '../../services/busqueda.service';
 
 @Component({
   selector: 'app-busqueda',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusquedaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private busquedaService: BusquedaService) { }
 
   ngOnInit() {
   }
 
+  private llenarUniversidades(){
+    this.busquedaService.getUniversidades();
+  }
 }

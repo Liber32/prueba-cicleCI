@@ -17,6 +17,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { RegistroService } from './services/registro.service';
 import { Http } from '@angular/http';
 import { LogoutComponent } from './components/logout/logout.component';
+import { NavComponent } from './components/nav/nav.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { LogoutComponent } from './components/logout/logout.component';
     WelcomeComponent,
     BusquedaComponent,
     RegisterComponent,
-    LogoutComponent
+    LogoutComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

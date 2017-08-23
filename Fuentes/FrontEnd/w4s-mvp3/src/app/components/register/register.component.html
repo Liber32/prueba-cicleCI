@@ -1,20 +1,22 @@
-<form>
+<form  #registroForm="ngForm" >
          
 <div class="form-group">
      <label for="email" >Email:</label>
-     <input id="email" name="email" type="text" placeholder="Email" [(ngModel)]="registro.email" class="form-control">
+     <input id="email" name="email" type="email" 
+     pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+     required placeholder="Email" [(ngModel)]="registro.email" class="form-control">
 </div>
         
  
   <div class="form-group">
       <label for="Nombre">Nombre completo:</label>
-      <input id="nombre" type="text" name="nombre" placeholder="Nombre" [(ngModel)]="registro.fullName" class="form-control">
+      <input id="nombre" minlength="3" type="text" name="nombre" required placeholder="Nombre" [(ngModel)]="registro.name" class="form-control">
   </div>
   <div class="form-group">
       <label for="Celular">Celular:</label>
-      <input id="celular" type="text" name="telefono" placeholder="Celular" [(ngModel)]="registro.telefono" class="form-control">
+      <input id="celular" type="number" minlength="10" maxlength="10" name="telefono" required placeholder="Celular" [(ngModel)]="registro.phoneNumber" class="form-control">
   </div>
   <div class="form-group">
-      <button class="btn btn-primary"> Registrar </button>
+      <button class="btn btn-primary" (click)="registrarUsuario()" [disabled]="!registroForm.form.valid"  > Registrar </button>
   </div>
 </form> 

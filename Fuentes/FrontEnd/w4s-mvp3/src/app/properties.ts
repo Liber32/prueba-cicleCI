@@ -5,7 +5,7 @@ export class Properties {
         if (environment.production) {
             return 'rutaproduccion';
         } else {
-            return 'http://192.168.3.218:8090/authentication';
+            return 'http://192.168.3.217:8080/authentication';
         }
     }
     static get logUrl(){
