@@ -1,0 +1,8 @@
+<h3> Se encontraron 5 resultados para {{direccion}}</h3>
+<ul class="list-group">
+    <li *ngFor="let servicio of servicios" class="list-group-item">
+      <h3> {{servicio.brand}} {{servicio.model}} {{servicio.year}} </h3>
+      <p class="text-success">Sale en {{servicio.departureTime}}</p>
+      <span class="glyphicon glyphicon-usd"> {{universidad.price}} </span>
+    </li>
+  </ul>

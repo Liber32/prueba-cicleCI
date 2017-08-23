@@ -19,6 +19,7 @@ import { Http } from '@angular/http';
 import { LogoutComponent } from './components/logout/logout.component';
 import { NavComponent } from './components/nav/nav.component';
 import { BusquedaService } from './services/busqueda.service';
+import { ResultadosComponent } from './components/resultados/resultados.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { BusquedaService } from './services/busqueda.service';
     BusquedaComponent,
     RegisterComponent,
     LogoutComponent,
-    NavComponent
+    NavComponent,
+    ResultadosComponent
   ],
   imports: [
     BrowserModule,

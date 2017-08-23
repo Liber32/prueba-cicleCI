@@ -5,12 +5,8 @@ export class Properties {
         if (environment.production) {
             return 'rutaproduccion';
         } else {
-            return 'http://192.168.3.217:8080/authentication';
+            return 'http://192.168.3.217:8080';
         }
-    }
-
-    static get anaURL() {
-        return 'http://192.168.3.207:8080/university';
     }
 
     static get logUrl() {

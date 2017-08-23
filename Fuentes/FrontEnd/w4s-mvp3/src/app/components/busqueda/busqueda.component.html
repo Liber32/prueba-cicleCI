@@ -1,10 +1,9 @@
-<form>
+<form #busquedaForm="ngForm">
   <div class="form-group">
     <label for="universidad">Elige tu Universidad de origen:</label>
 
-    <select class="form-control" name="univerdidad" id="universidad" [(ngModel)]="universidadSeleccionada" >
-      <option value=""> Seleccione </option>
-      <option *ngFor= "let universidad of univerdidades" [ngValue]="universidad"> {{universidad.name}} </option>
+    <select class="form-control" name="univerdidad" required id="universidad" [(ngModel)]="universidadSeleccionada" >
+      <option *ngFor= "let universidad of univerdidades" [ngValue]="universidad">  {{universidad.name}} </option>
       
     </select>
   </div>
@@ -13,7 +12,7 @@
   <div class="form-inline">
     <div class="form-group">
       <div class="input-group">
-        <select class="form-control" name="univerdidad" id="universidad">
+        <select required class="form-control" name="calle" id="calle" [(ngModel)]="cllSeleccionado">
         <option value="">  </option>
         <option value="Calle"> Calle </option>
         <option value="Carrera"> Carrrera </option>
@@ -27,14 +26,14 @@
         <option value="Via"> Vía </option>
       </select>
         <div class="input-group-addon"></div>
-        <input class="form-control" id="numero" type="text" placeholder="Número">
+        <input class="form-control" name="numero" required ([ngModel]) = "numero"  type="text" placeholder="Número">
         <div class="input-group-addon">#</div>
-        <input class="form-control" id="numero" type="text" placeholder="Número">
+        <input class="form-control" required ([ngModel]) = "par1" name="numero2" type="text" placeholder="">
         <div class="input-group-addon">-</div>
-        <input class="form-control" id="cll" type="text" placeholder="cll">
+        <input class="form-control" required name="numero3" ([ngModel]) = "par2" id="cll" type="text" placeholder="">
       </div>
     </div>
   </div>
   <hr>
-  <button class="btn btn-primary" (click) ="buscar()"> Buscar </button>
+  <button class="btn btn-primary" (click) ="buscar()"  [disabled]="validarForm()"> Buscar </button>
 </form>

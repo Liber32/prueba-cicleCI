@@ -11,9 +11,17 @@ export class BusquedaService extends BaseService {
   }
 
   public getUniversidades() {
-    return this.http.get(`${this.anaURL}/name`, { headers: this.headers })
+    return this.http.get(`${this.baseUrl}/university/name`, { headers: this.headers })
       .map(
         response => response.json() as Response
       ).catch(this.handleError);
   }
+
+  public getServicios() {
+    return this.http.get(`${this.baseUrl}/search/name`, { headers: this.headers })
+      .map(
+        response => response.json() as Response
+      ).catch(this.handleError);
+  }
+
 }
