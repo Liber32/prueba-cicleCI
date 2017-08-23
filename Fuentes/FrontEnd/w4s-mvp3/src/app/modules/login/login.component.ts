@@ -44,29 +44,7 @@ export class LoginComponent implements OnInit {
       localStorage.setItem("session_status",'true');    
     }
   }
-  /**
-   * Edita el estado de la sesion en LocalStorage
-   * @param estado 
-   */
-  public editarSesion(estado:string){
-    if(this.isStorage()){
-      localStorage.setItem("session_status",estado);    
-    }
-  }
-  /**
-   * Retorna true si la sesion del usuario esta iniciada
-   * En otro caso diferente retorna false.
-   */
-  public isSesionInit(){
-    let respuesta = false;
-    if(this.isStorage()){
-      let sessionStatus = localStorage.getItem("session_status");
-      if(sessionStatus == 'true'){
-        respuesta = true;
-      }
-    }
-    return respuesta;
-  }
+
   /**
    * Envia una peticion get al microservicio de login
    * y verifica si el usuario inicio sesion correctamente.
@@ -75,6 +53,7 @@ export class LoginComponent implements OnInit {
     this.loginService.loginUsuario(this.email).subscribe((response: Response) => {
       // Redireccionar.
       if (response.code === '200') {
+        this.guardarSesion();
         this.router.navigate(['/busqueda']);
       } else {
         this.loginService.showMsTranslate("Error al iniciar sesión", 'danger', 3000);
