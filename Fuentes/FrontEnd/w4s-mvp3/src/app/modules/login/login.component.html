@@ -4,11 +4,11 @@
     
      <div class="form-group">
            <label for="email" >Digita aquí el email con el cual estas registrado:</label>
-           <input id="email" [(ngModel)]="email" type="text"  placeholder="Email" class="form-control">
+           <input id="email" name="email" [(ngModel)]="email" type="text"  placeholder="Email" class="form-control">
      </div>
        
     <div class="form-group">
-     <button class="btn btn-primary" (click)="loginUser()"> Login </button>
+     <button class="btn btn-primary" (click)="loginUsuario()"> Login </button>
     </div>
     <div>
         <label for="msjRedRegistro" >Si no estas registrado puedes reaizarlo ingresando a este link</label>
