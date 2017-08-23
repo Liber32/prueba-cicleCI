@@ -12,7 +12,7 @@ export class LoginService extends BaseService{
       super(injector);
   }
 
-  public loginUser(email:string){
+  public loginUsuario(email:string){
     return this.http.get(`${this.baseUrl}/login?email=${email}`, { headers: this.headers })
       .map(
         response => response.json() as Response

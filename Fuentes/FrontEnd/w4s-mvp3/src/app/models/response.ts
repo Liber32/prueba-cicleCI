@@ -1,6 +1,6 @@
-export class response {
+export class Response {
 
-    code:Number;
+    code:String;
     type:String;
     entity?:any;
 

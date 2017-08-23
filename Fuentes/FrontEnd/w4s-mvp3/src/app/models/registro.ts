@@ -1,5 +1,5 @@
 export class Registro {
     email?: string;
-    telefono?: string;
-    fullName?: string;
+    phoneNumber?: string;
+    name?: string;
 }
