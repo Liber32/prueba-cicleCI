@@ -18,6 +18,7 @@ import { RegistroService } from './services/registro.service';
 import { Http } from '@angular/http';
 import { LogoutComponent } from './components/logout/logout.component';
 import { NavComponent } from './components/nav/nav.component';
+import { LoginService } from './services/login.service';
 import { BusquedaService } from './services/busqueda.service';
 import { ResultadosComponent } from './components/resultados/resultados.component';
 
@@ -39,7 +40,9 @@ import { ResultadosComponent } from './components/resultados/resultados.componen
     LoginModule,
     FormsModule
   ],
-  providers: [AuthGuard,RegistroService, BusquedaService,FlashMessagesService],
+
+  providers: [AuthGuard,RegistroService,BusquedaService,FlashMessagesService,LoginService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

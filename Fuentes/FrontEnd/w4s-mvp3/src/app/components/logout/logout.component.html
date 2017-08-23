@@ -1,3 +1,6 @@
 <ul class="nav navbar-nav navbar-right">
-  <li><a (click) ="cerrarSesion()"><span class="glyphicon glyphicon-home" > Cerrar Sesión </span></a></li>
+  <li>
+    <a *ngIf="isSesionInit()" (click) ="cerrarSesion()"><span class="glyphicon glyphicon-home" > Cerrar Sesión </span></a>
+    <a *ngIf="!isSesionInit()" (click) ="iniciarSesion()"><span class="glyphicon glyphicon-home" > Iniciar Sesión </span></a>
+  </li>
 </ul>
