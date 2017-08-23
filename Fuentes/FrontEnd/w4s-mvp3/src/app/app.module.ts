@@ -38,11 +38,9 @@ import { BusquedaService } from './services/busqueda.service';
     LoginModule,
     FormsModule
   ],
-<<<<<<< HEAD
-  providers: [AuthGuard,RegistroService,FlashMessagesService,LoginService],
-=======
-  providers: [AuthGuard,RegistroService, BusquedaService,FlashMessagesService],
->>>>>>> ca1773d7bfd5ca5d9a4fabb391c6dfa0bec9dac7
+
+  providers: [AuthGuard,RegistroService,BusquedaService,FlashMessagesService,LoginService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
