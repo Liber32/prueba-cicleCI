@@ -17,7 +17,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { RegistroService } from './services/registro.service';
 import { Http } from '@angular/http';
 import { LogoutComponent } from './components/logout/logout.component';
-
+ 
 
 @NgModule({
   declarations: [
