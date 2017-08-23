@@ -1,6 +1,7 @@
 import { Injectable, Injector } from '@angular/core';
 import { BaseService } from './base.service';
 import { Http } from '@angular/http';
+import { Response } from '../models/response';
 
 @Injectable()
 export class BusquedaService extends BaseService {
@@ -10,7 +11,7 @@ export class BusquedaService extends BaseService {
   }
 
   public getUniversidades() {
-    return this.http.post(`${this.baseUrl}/university/name`, { headers: this.headers })
+    return this.http.get(`${this.anaURL}/name`, { headers: this.headers })
       .map(
         response => response.json() as Response
       ).catch(this.handleError);

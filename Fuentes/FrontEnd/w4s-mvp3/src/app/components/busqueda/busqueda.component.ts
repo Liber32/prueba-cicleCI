@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BusquedaService } from '../../services/busqueda.service';
+import { Response } from '../../models/response';
+import { University } from '../../models/university';
 
 @Component({
   selector: 'app-busqueda',
@@ -8,12 +10,28 @@ import { BusquedaService } from '../../services/busqueda.service';
 })
 export class BusquedaComponent implements OnInit {
 
-  constructor(private busquedaService: BusquedaService) { }
+  univerdidades: Array<University> = [];
+  universidadSeleccionada: University;
+
+  constructor(private busquedaService: BusquedaService) {
+   }
 
   ngOnInit() {
+    this.llenarUniversidades();
   }
 
   private llenarUniversidades(){
-    this.busquedaService.getUniversidades();
+    this.busquedaService.getUniversidades().subscribe((response: Response) => {
+      if (response.code === '200') {
+        this.univerdidades = response.entity;
+      } else {
+        this.busquedaService.showMsTranslate(`Error al registrar, ${response.type.toLowerCase()}`, 'danger', 5000);
+      }
+    });
   }
+
+  public buscar(){
+    console.log(this.universidadSeleccionada);
+  }
+
 }

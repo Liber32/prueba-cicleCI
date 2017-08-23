@@ -18,6 +18,7 @@ import { RegistroService } from './services/registro.service';
 import { Http } from '@angular/http';
 import { LogoutComponent } from './components/logout/logout.component';
 import { NavComponent } from './components/nav/nav.component';
+import { BusquedaService } from './services/busqueda.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { NavComponent } from './components/nav/nav.component';
     LoginModule,
     FormsModule
   ],
-  providers: [AuthGuard,RegistroService,FlashMessagesService],
+  providers: [AuthGuard,RegistroService, BusquedaService,FlashMessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

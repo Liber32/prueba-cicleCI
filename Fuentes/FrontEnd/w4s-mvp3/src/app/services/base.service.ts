@@ -14,6 +14,7 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 export class BaseService {
 
     protected baseUrl = Properties.baseUrl;
+    protected anaURL = Properties.anaURL;
     private _headers = new Headers({ 'Content-Type': 'application/json' });
     protected alertService:FlashMessagesService ;
 
