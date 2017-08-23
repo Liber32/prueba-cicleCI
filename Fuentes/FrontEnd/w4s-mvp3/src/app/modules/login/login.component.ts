@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../../services/login.service';
 import { Router } from '@angular/router';
-import { response } from '../../models/response';
+import { Response } from '../../models/response';
+import { response } from '../../models/servicio';
 
 @Component({
   selector: 'app-login',
@@ -26,7 +27,7 @@ export class LoginComponent implements OnInit {
   public loginUsuario() {
     this.loginService.loginUsuario(this.email).subscribe((response: Response) => {
       // Redireccionar.
-      if (Response.code === 200) {
+      if (response.code === '200') {
         this.router.navigate(['/busqueda']);
       } else {
         this.loginService.showMsTranslate("Error al ", 'danger', 3000);

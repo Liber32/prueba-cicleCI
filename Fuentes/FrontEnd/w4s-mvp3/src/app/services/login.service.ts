@@ -3,7 +3,7 @@ import { Registro } from '../models/index';
 import { Headers, Http } from '@angular/http';
 import { BaseService } from './base.service';
 import { Observable } from 'rxjs/Observable';
-import { response } from '../models/response';
+import { Response } from '../models/response';
 
 @Injectable()
 export class LoginService extends BaseService{
